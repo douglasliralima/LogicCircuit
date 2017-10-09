@@ -48,9 +48,9 @@ public class CircuitoLogico {
         for (int linhaAtual = 1; linhaAtual <= maxLinhas; linhaAtual++) {
             linha = ""; //Vamos resetar a linha
             //Vamos ver agora o resultado booleano das nossas saidas nessa linha
-            yAnd = (Porta.and(valorEntrada) == true) ? 1 : 0;
-            yOr = (Porta.or(valorEntrada) == true) ? 1 : 0;
-            yXor = (Porta.xor(valorEntrada) == true) ? 1 : 0;
+            yAnd = (Porta.not(Porta.not(Porta.and(valorEntrada))) == true) ? 1 : 0;
+            yOr = (Porta.not(Porta.not(Porta.or(valorEntrada))) == true) ? 1 : 0;
+            yXor = (Porta.not(Porta.not(Porta.xor(valorEntrada))) == true) ? 1 : 0;
             
             for (int entradaAtual = maxEntrada - 1; entradaAtual >= 0; entradaAtual--) {
                 /*
