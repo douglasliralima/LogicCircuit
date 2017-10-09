@@ -19,7 +19,7 @@ public class CircuitoLogico {
     */
     
     public static void main(String[] args) {
-        int maxEntrada = 2;
+        int maxEntrada = 8;
         int entrada[], yAnd, yOr, yXor;
         try { //Vamos resetar o arquivo se estiver criado
             FileWriter arquivo = new FileWriter("tabela.txt", false);
